@@ -1,0 +1,28 @@
+:root {
+  --font-heading: 'Bungee', sans-serif;
+  --font-subheading: 'Fredoka', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  --font-accent: 'Pacifico', cursive;
+
+
+  --primary-red: #e63946;
+  --primary-yellow: #ffcf00;
+  --primary-orange: #ff6f00;
+
+  --secondary-blue: #264653;
+  --secondary-purple: #9b5de5;
+  --secondary-green: #2a9d8f;
+
+  --highlight-gold: #ffd700;
+  --highlight-silver: #c0c0c0;
+  --highlight-neon-pink: #ff4ecb;
+
+  --bg-dark: #0d1b2a;
+  --bg-night: #1a1a2e;
+  --bg-light: #fffaf0;
+
+}
+
+body{
+    
+}
