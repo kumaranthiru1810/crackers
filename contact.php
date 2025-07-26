@@ -29,7 +29,7 @@ foreach ($result as $row) {
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3>Contact Form</h3>
+                <h3>Contact Forms</h3>
                 <div class="row cform">
                     <div class="col-md-8">
                         <div class="well well-sm">
