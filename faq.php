@@ -11,7 +11,7 @@ foreach ($result as $row) {
     $faq_banner = $row['faq_banner'];
 }
 ?>
-<div class="page-banner">
+<div class="page-banner" style="background-image: url(assets/uploads/<?php echo $faq_banner; ?>);">
     <div class="inner">
         <h1><?php echo $faq_title; ?></h1>
     </div>
