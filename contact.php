@@ -166,20 +166,6 @@ foreach ($result as $row) {
                             </form>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
-                        <address>
-                            <?php echo nl2br($contact_address); ?>
-                        </address>
-                        <address>
-                            <strong>Phone:</strong><br>
-                            <span><?php echo $contact_phone; ?></span>
-                        </address>
-                        <address>
-                            <strong>Email:</strong><br>
-                            <a href="mailto:<?php echo $contact_email; ?>"><span><?php echo $contact_email; ?></span></a>
-                        </address>
-                    </div>
                 </div>
 
                 <!-- <h3>Find Us On Map</h3> -->
