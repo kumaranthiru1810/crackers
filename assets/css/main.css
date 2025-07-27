@@ -925,7 +925,6 @@ Mobile style's
     overflow: hidden;
 }
 
-.home-blog .item {}
 
 .home-blog .item .photo {
     width: 100%;
@@ -2108,10 +2107,6 @@ table.bill-address tr td:nth-of-type(1) {
     background: #fff;
 }
 
-.card .nav-tabs>li.active>a,
-.nav-tabs>li.active>a:focus,
-.nav-tabs>li.active>a:hover {}
-
 .card .nav-tabs>li>a {
     border: none;
     color: #666;
@@ -2482,4 +2477,24 @@ div.pagination span.disabled {
     padding: 5px 10px;
     border-radius: 3px;
     font-size: 0.8rem;
+}
+
+
+/* contact Form Page */
+ .contactform-heading{
+    text-align: center;
+ }
+.contact-form-box{
+    width: 70%;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    padding: 20px 30px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    /* border: 2px solid #dcdcdc; */
+    border: none;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
 }
