@@ -61,7 +61,7 @@ foreach ($result as $row) {
         ?>
             <div class="item <?php if ($i == 0) {
                                     echo 'active';
-                                } ?>" style="background-image:url(assets/uploads/);">
+                                } ?>" style="background-image:url(assets/uploads/<?php echo $row['photo']; ?>);">
                 <div class="bs-slider-overlay"></div>
                 <div class="container">
                     <div class="row">
@@ -548,3 +548,5 @@ if (isset($_POST['form_add_to_wish'])) {
 
 
 <?php include('footer.php') ?>
+
+<?php include('./footer_bottom.php'); ?>
