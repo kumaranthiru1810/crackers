@@ -191,3 +191,5 @@ foreach ($result as $row) {
 </div>
 
 <?php require_once('footer.php'); ?>
+
+<?php include('./footer_bottom.php'); ?>

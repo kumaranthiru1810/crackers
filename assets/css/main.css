@@ -152,11 +152,11 @@ marquee {
     /* position: relative; */
 }
 
-@media(max-width:320px) {
+/* @media(max-width:320px) {
     .header {
         display: none;
     }
-}
+} */
 
 .header .inner {
     display: table;
