@@ -1,8 +1,11 @@
  footer a {
     color: #EFEEEA;
     text-decoration: none;
+    transition: .2s;
   }
 
   footer a:hover {
     color: #FE7743;
+    margin-left: 10px;
+    transition: .3s;
   }
