@@ -11,10 +11,10 @@
     <div style="flex: 1; min-width: 200px;">
       <h2 style="color: #FE7743;">Quick Links</h2>
       <ul style="list-style: none; padding: 0;">
-        <li><a href="#">Home</a></li><br>
-        <li><a href="#">About</a></li><br>
-        <li><a href="#">Events</a></li><br>
-        <li><a href="#">Contact</a></li><br>
+        <li><i class="fa fa-arrow-right"></i><a href="#">Home</a></li><br>
+        <li><i class="fa fa-arrow-right"></i><a href="#">About</a></li><br>
+        <li><i class="fa fa-arrow-right"></i><a href="#">Events</a></li><br>
+        <li><i class="fa fa-arrow-right"></i><a href="#">Contact</a></li><br>
       </ul>
     </div>
 
@@ -26,7 +26,7 @@
 
   </div>
 
-  <div style="text-align: center; border-top: 1px solid #FE7743; margin-top: 30px; padding-top: 15px; font-size: 14px;">
+  <div style="text-align: center; border-top: 1px #FE7743; margin-top: 30px; padding-top: 15px; font-size: 14px;">
     © Developed By,<span style="color: #FE7743; cursor: pointer;">Anjana Infotech.</span> All rights reserved.
   </div>
 </footer>
