@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,13 +45,20 @@
     </div>
   </div>
 </nav>
+=======
+<link rel="stylesheet" href="./assets/css/footer_bottom.css">
+>>>>>>> 652cdeb11b48721a1d80cbd4089310daf5af2dc3
 <!-- Footer Start -->
 <footer style="background-color: #273F4F; color: #EFEEEA; padding: 40px 20px;">
   <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
 
     <div style="flex: 1; min-width: 250px;">
       <h2 style="color: #FE7743;">Magical Crackers</h2>
+<<<<<<< HEAD
       <p style="line-height: 1.6;"></p>
+=======
+      <p style="line-height: 2;">Lighring up moments, one sparkle at a time<br>Celebrate safely, celebrate bright.</p>
+>>>>>>> 652cdeb11b48721a1d80cbd4089310daf5af2dc3
     </div>
 
     <div style="flex: 1; min-width: 200px;">
@@ -76,7 +84,10 @@
   </div>
 </footer>
 
+<<<<<<< HEAD
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
+=======
+>>>>>>> 652cdeb11b48721a1d80cbd4089310daf5af2dc3
