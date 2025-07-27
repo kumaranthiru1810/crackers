@@ -29,10 +29,10 @@ foreach ($result as $row) {
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3>Contact Forms</h3>
                 <div class="row cform">
                     <div class="col-md-8">
-                        <div class="well well-sm">
+                        <div class="well well-sm contact-form-box">
+                            <h3 class="contactform-heading">Contact Form</h3>
 
                             <?php
                             // After form submit checking everything for email sending
