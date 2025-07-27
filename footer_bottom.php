@@ -61,13 +61,13 @@
 >>>>>>> 652cdeb11b48721a1d80cbd4089310daf5af2dc3
     </div>
 
-    <div style="flex: 1; min-width: 200px;">
+    <div id="linkes" style="flex: 1; min-width: 200px;">
       <h2 style="color: #FE7743;">Quick Links</h2>
       <ul style="list-style: none; padding: 0;">
-        <li><i class="fa fa-arrow-right"></i><a href="#">Home</a></li><br>
-        <li><i class="fa fa-arrow-right"></i><a href="#">About</a></li><br>
-        <li><i class="fa fa-arrow-right"></i><a href="#">Events</a></li><br>
-        <li><i class="fa fa-arrow-right"></i><a href="#">Contact</a></li><br>
+        <li><i class="fa fa-arrow-right"></i> <a href="#"> Home</a></li><br>
+        <li><i class="fa fa-arrow-right"></i> <a href="#"> About</a></li><br>
+        <li><i class="fa fa-arrow-right"></i> <a href="#"> Events</a></li><br>
+        <li><i class="fa fa-arrow-right"></i> <a href="#"> Contact</a></li><br>
       </ul>
     </div>
 
