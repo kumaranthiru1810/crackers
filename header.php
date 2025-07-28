@@ -242,7 +242,7 @@ foreach ($result as $row) {
 </div>-->
 
 	<!-- top bar -->
-	<div class="top">
+	 <div class="top">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-sm-6 col-xs-12">
@@ -253,15 +253,12 @@ foreach ($result as $row) {
 							
 						</ul>
 					</div>
-					<div class="right">
-						<ul>
-					<li><marquee behavior="loop" direction="left">Thank For Your Shopping!</marquee>
-					</ul>
-	</div>
 				</div>
-				<!-- <div class="col-md-6 col-sm-6 col-xs-12">
 					<div class="right">
-						<ul>
+						<button class="btn"><a href="login.php"><i class="fa fa-sign-in"></i> <?php echo LANG_VALUE_9; ?></a></button>
+						<button class="btn"><a href="registration.php"><i class="fa fa-user-plus"></i> <?php echo LANG_VALUE_15; ?></a></button>
+						
+						<!-- <ul>
 							<?php
 							$statement = $pdo->prepare("SELECT * FROM tbl_social");
 							$statement->execute();
@@ -274,38 +271,7 @@ foreach ($result as $row) {
 							<?php
 							}
 							?>
-						</ul>
-					</div>
-				</div> -->
-			</div>
-		</div>
-	</div>
-
-
-	<div class="header">
-		<div class="container">
-			<div class="row inner">
-				<div class="col-md-3 logo">
-					<a href="index.php" style="text-decoration: none;"><img style="border-radius: 50%;padding: 10px" src="assets/uploads/<?php echo $logo; ?>" alt="logo image"></a>
-					<!-- <h3><?php echo $shop_name ?></h3> -->
-				</div>
-
-				<div class="col-md-5 right">
-					<ul>
-
-						<?php
-						if (isset($_SESSION['customer'])) {
-						?>
-							<li><i class="fa fa-user"></i> <?php echo LANG_VALUE_13; ?> <?php echo $_SESSION['customer']['cust_name']; ?></li>
-							<li><a href="dashboard.php"><i class="fa fa-home"></i> <?php echo LANG_VALUE_89; ?></a></li>
-						<?php
-						} else {
-						?>
-							<li><a href="login.php"><i class="fa fa-sign-in"></i> <?php echo LANG_VALUE_9; ?></a></li>
-							<li><a href="registration.php"><i class="fa fa-user-plus"></i> <?php echo LANG_VALUE_15; ?></a></li>
-						<?php
-						}
-						?>
+						</ul> -->
 
 						<li><a href="cart.php"><i class="fa fa-shopping-cart"></i> <?php echo LANG_VALUE_19; ?> (<img src="./assets/uploads/rupee-indian.png" width="15px"><?php
 																																			if (isset($_SESSION['cart_p_id'])) {
@@ -332,7 +298,7 @@ foreach ($result as $row) {
 						<li><a href="wishlist.php"><image src="./assets/uploads/like.png" width="20"> Wishlist</a></li>
 					</ul>
 				</div>
-				<div class="col-md-4 search-area">
+				<!-- <div class="col-md-4 search-area">
 					<form class="navbar-form navbar-left" role="search" action="search-result.php" method="get">
 						<?php $csrf->echoInputField(); ?>
 						<div class="form-group">
@@ -340,6 +306,8 @@ foreach ($result as $row) {
 						</div>
 						<button type="submit" class="btn btn-default"><?php echo LANG_VALUE_3; ?></button>
 					</form>
+				</div> -->
+					</div>
 				</div>
 			</div>
 		</div>
@@ -348,7 +316,11 @@ foreach ($result as $row) {
 	<div class="nav">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 pl_0 pr_0">
+				<div class="col-md-6 logo">
+					<a href="index.php" style="text-decoration: none;"><img style="border-radius: 50%;padding: 10px" src="assets/uploads/<?php echo $logo; ?>" alt="logo image"></a>
+					 <!-- <h3><?php echo $shop_name ?></h3> -->																							
+				</div> 
+				<div class="col-md-6 pl_0 pr_0">
 					<div class="menu-container">
 						<div class="menu">
 							<ul>
