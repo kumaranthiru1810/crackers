@@ -4,6 +4,10 @@
     transition: .2s;
   }
 
+  footer{
+    background: url('../uploads/Fireworks.gif') no-repeat center center fixed;
+    background-size: cover;
+  }
   #linkes a:hover {
     color: #FFD700;
     margin-left: 10px;
@@ -62,13 +66,13 @@
 @keyframes lightBeam {
   0% {
     opacity: 0;
-    left: -100%;
+    left: -50%;
   }
   50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    left: 100%;
+    left: 50%;
   }
 }
