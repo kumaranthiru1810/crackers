@@ -295,7 +295,7 @@ foreach ($result as $row) {
                         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                         foreach ($result as $row) {
                         ?>
-                            <div class="item">
+                            <div class="item" style="box-shadow: 0 0 3px rgba(255, 100, 0, 0.3);">
                                 <div class="thumb">
                                     <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>);"></div>
                                     <div class="overlay"></div>

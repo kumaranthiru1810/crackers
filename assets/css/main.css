@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+/* @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700'); */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 * {
     margin: 0;
@@ -76,7 +77,7 @@ a:hover {
 .top {
     width: 100%;
     height: 40px;
-    background: #273F4F;
+    background: #1a1a2e;
     /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     position: relative;
@@ -101,11 +102,12 @@ a:hover {
     list-style-type: none;
     float: left;
     margin-right: 14px;
-    color: #fff;
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4)
 }
 
 .top .left ul li i {
-    color: #fff;
+    color:#fff;
 }
 
 .top .right .btn {
@@ -238,14 +240,14 @@ list-style-type: none;
 }
 
 .row .logo img {
-    /* max-width: 80%; */
+    max-width: 80%;
 
     height: 50px;
 }
 .menu-mobile {
     display: none;
     padding: 20px;
-    color: #000;
+    color: #1a1a2e;
 }
 
 .menu-mobile:hover {
@@ -308,8 +310,8 @@ list-style-type: none;
     padding: 1.5em 20px;
     display: block;
     /* color: #FFD700; */
-    color: #FFD700;
-      text-shadow: 0 0 20px #FFD700;
+    color: #000;
+    text-shadow: 0 0 20px #FFD700;
     font-weight: bold;
     transition: .5s;
     position: relative;
@@ -325,13 +327,13 @@ list-style-type: none;
     bottom: 0;
     height: 2px;
     width: 0;
-    background-color: #fff;
+    background-color: #FFD700;
     transition: width 0.3s ease-in;
 }
 
 .menu>ul>li a:hover {
-    background: #273F4F;
-    color: #fff;
+    background: #1a1a2e;
+    color: #FFD700;
     transition: .5s;
 }
 
@@ -2493,4 +2495,5 @@ div.pagination span.disabled {
     /* border: 2px solid #dcdcdc; */
     border: none;
 }
+
 

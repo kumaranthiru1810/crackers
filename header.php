@@ -271,9 +271,9 @@ foreach ($result as $row) {
 							<?php
 							}
 							?>
-						</ul> -->
+						</ul> 
 
-						<li><a href="cart.php"><i class="fa fa-shopping-cart"></i> <?php echo LANG_VALUE_19; ?> (<img src="./assets/uploads/rupee-indian.png" width="15px"><?php
+						<!-- <li><a href="cart.php"><i class="fa fa-shopping-cart"></i> <?php echo LANG_VALUE_19; ?> (<img src="./assets/uploads/rupee-indian.png" width="15px"><?php
 																																			if (isset($_SESSION['cart_p_id'])) {
 																																				$table_total_price = 0;
 																																				$i = 0;
@@ -306,8 +306,8 @@ foreach ($result as $row) {
 						</div>
 						<button type="submit" class="btn btn-default"><?php echo LANG_VALUE_3; ?></button>
 					</form>
-				</div> -->
-					</div>
+				</div> 
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -325,6 +325,22 @@ foreach ($result as $row) {
 						<div class="menu">
 							<ul>
 
+								<?php
+								$statement = $pdo->prepare("SELECT * FROM tbl_page WHERE id=1");
+								$statement->execute();
+								$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+								foreach ($result as $row) {
+									$about_title = $row['about_title'];
+									$faq_title = $row['faq_title'];
+									$blog_title = $row['blog_title'];
+									$contact_title = $row['contact_title'];
+									$pgallery_title = $row['pgallery_title'];
+									$vgallery_title = $row['vgallery_title'];
+								}
+								?>
+								<li><a href="index.php" id="homehov">Home</a></li>
+
+								<li><a href="about.php"><?php echo $about_title; ?></a></li>
 								<?php
 								$statement = $pdo->prepare("SELECT * FROM tbl_top_category WHERE show_on_menu=1");
 								$statement->execute();
@@ -361,23 +377,6 @@ foreach ($result as $row) {
 								<?php
 								}
 								?>
-
-								<?php
-								$statement = $pdo->prepare("SELECT * FROM tbl_page WHERE id=1");
-								$statement->execute();
-								$result = $statement->fetchAll(PDO::FETCH_ASSOC);
-								foreach ($result as $row) {
-									$about_title = $row['about_title'];
-									$faq_title = $row['faq_title'];
-									$blog_title = $row['blog_title'];
-									$contact_title = $row['contact_title'];
-									$pgallery_title = $row['pgallery_title'];
-									$vgallery_title = $row['vgallery_title'];
-								}
-								?>
-								<li><a href="index.php" id="homehov">Home</a></li>
-
-								<li><a href="about.php"><?php echo $about_title; ?></a></li>
 								<li><a href="faq.php"><?php echo $faq_title; ?></a></li>
 
 								<li><a href="contact.php"><?php echo $contact_title; ?></a></li>

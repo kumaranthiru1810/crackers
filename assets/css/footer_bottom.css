@@ -5,7 +5,7 @@
   }
 
   #linkes a:hover {
-    color: #FE7743;
+    color: #FFD700;
     margin-left: 10px;
     transition: .3s;
   }
@@ -13,3 +13,62 @@
   #linkes i{
     font-size: 18px;
   }
+
+ .premium-gold-heading {
+  font-family: 'Abril Fatface', serif;
+  font-size: 2.5rem;
+  background: linear-gradient(
+    90deg,
+    #FFD700 0%,
+    #FFFACD 20%,
+    #FFD700 40%,
+    #FFA500 60%,
+    #FFD700 80%,
+    #FFFACD 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  text-shadow: 
+    0 0 5px rgba(255, 215, 0, 0.3),
+    0 0 10px rgba(255, 165, 0, 0.2);
+  animation: goldFlow 4s linear infinite;
+  position: relative;
+  display: inline-block;
+  padding: 0 15px;
+}
+
+@keyframes goldFlow {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.premium-gold-heading::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FFD700, transparent);
+  transform: translateY(-50%);
+  animation: lightBeam 3s ease-in-out infinite;
+}
+
+@keyframes lightBeam {
+  0% {
+    opacity: 0;
+    left: -100%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: 100%;
+  }
+}
