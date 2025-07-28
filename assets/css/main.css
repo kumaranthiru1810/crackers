@@ -2496,4 +2496,50 @@ div.pagination span.disabled {
     border: none;
 }
 
+.full-container{
+    height:600px;
+}
+
+.message-div{
+    position:absolute;
+    top:305px;
+}
+
+.button-div{
+    position:absolute;
+    top:600px;
+    right:250px;
+}
+
+.name-input{
+    width:480px;
+}
+
+.email-input{
+    width:480px;
+}
+
+.phone-no-input{
+    width:480px;
+}
+
+.message-input{
+    width:480px;
+    resize: vertical;
+    
+}
+
+.font{
+    font-size: large;
+}
+
+.flex-content{
+    width:650px;
+    height:600px;
+    position:absolute;
+    left:580px;
+    bottom:20px;
+}
+
+
 

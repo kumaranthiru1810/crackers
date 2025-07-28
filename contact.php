@@ -134,32 +134,31 @@ foreach ($result as $row) {
                                 echo "<script>alert('" . $success_message . "')</script>";
                             }
                             ?>
-
-
+                
                             <form action="" method="post">
                                 <?php $csrf->echoInputField(); ?>
-                                <div class="row">
+                                <div class="row full-container">
                                     <div class="col-md-6">
-                                        <div class="form-group">
+                                        <div class="form-group font">
                                             <label for="name">Name</label>
-                                            <input type="text" class="form-control" name="visitor_name" placeholder="Enter name">
+                                            <input type="text" class="form-control name-input" name="visitor_name" placeholder="Enter name">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group font">
                                             <label for="email">Email Address</label>
-                                            <input type="email" class="form-control" name="visitor_email" placeholder="Enter email address">
+                                            <input type="email" class="form-control email-input" name="visitor_email" placeholder="Enter email address">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group font">
                                             <label for="email">Phone Number</label>
-                                            <input type="text" class="form-control" name="visitor_phone" placeholder="Enter phone number">
+                                            <input type="text" class="form-control phone-no-input" name="visitor_phone" placeholder="Enter phone number">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 message-div font">
                                         <div class="form-group">
                                             <label for="name">Message</label>
-                                            <textarea name="visitor_message" class="form-control" rows="9" cols="25" placeholder="Enter message"></textarea>
+                                            <textarea name="visitor_message" class="form-control message-input" rows="9" cols="25" placeholder="Enter message"></textarea>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 button-div">
                                         <input type="submit" value="Send Message" class="btn btn-primary pull-right" name="form_contact">
                                     </div>
                                 </div>
@@ -167,10 +166,10 @@ foreach ($result as $row) {
                         </div>
                     </div>
                 </div>
-
-                <!-- <h3>Find Us On Map</h3> -->
-                <!-- <?php echo $contact_map_iframe; ?> -->
-
+                    <div class="flex-content"> 
+                        <!-- <h3>Find Us On Map</h3> -->
+                        <?php echo $contact_map_iframe; ?>
+                    </div> 
             </div>
         </div>
     </div>
