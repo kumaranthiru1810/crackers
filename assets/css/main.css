@@ -2326,7 +2326,7 @@ div.pagination span.disabled {
     color: #EFEEEA;
     padding: 80px 0;
     width: 100vw;
-    height: 50vh;
+    height: auto;
     overflow: hidden;
     /* background-image: linear-gradient(rgba(39, 63, 79, 0.8), rgba(39, 63, 79, 0.8)), url(assets/uploads/<?php echo $faq_banner; ?>); */
     background-size: cover;
