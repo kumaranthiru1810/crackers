@@ -32,7 +32,7 @@ foreach ($result as $row) {
                 <div class="row cform">
                     <div class="col-md-8">
                         <div class="well well-sm contact-form-box">
-                            <h3 class="contactform-heading">Contacts Form</h3>
+                            <h3 class="contactform-heading">Contact</h3>
 
                             <?php
                             // After form submit checking everything for email sending
@@ -165,20 +165,6 @@ foreach ($result as $row) {
                                 </div>
                             </form>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
-                        <address>
-                            <?php echo nl2br($contact_address); ?>
-                        </address>
-                        <address>
-                            <strong>Phone:</strong><br>
-                            <span><?php echo $contact_phone; ?></span>
-                        </address>
-                        <address>
-                            <strong>Email:</strong><br>
-                            <a href="mailto:<?php echo $contact_email; ?>"><span><?php echo $contact_email; ?></span></a>
-                        </address>
                     </div>
                 </div>
 
