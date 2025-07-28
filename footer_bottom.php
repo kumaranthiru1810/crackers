@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="./assets/css/footer_bottom.css">
 <!-- Footer Start -->
 <footer style="background-color: #1a1a2e; color: #EFEEEA; padding: 40px 20px;">
   <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
