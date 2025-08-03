@@ -128,12 +128,12 @@ This link will be active only for 24 hours.
 			</div>
 		</div>
 	</div>
-</div> -->
+</div>
 
 
 <a href="#" class="scrollup">
 	<i class="fa fa-angle-up"></i>
-</a>
+</a> -->
 
 <?php
 $statement = $pdo->prepare("SELECT * FROM tbl_settings WHERE id=1");

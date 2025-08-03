@@ -1,3 +1,5 @@
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<body style="padding:0;">
 <?php require_once('header.php'); ?>
 
 <?php
@@ -29,7 +31,7 @@ foreach ($result as $row) {
 
 ?>
 
-<div id="bootstrap-touch-slider" class="carousel bs-slider fade control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="false">
+<div id="bootstrap-touch-slider" class="carousel bs-slider slide control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" data-wrap="true">
 
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -40,9 +42,7 @@ foreach ($result as $row) {
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         foreach ($result as $row) {
         ?>
-            <li data-target="#bootstrap-touch-slider" data-slide-to="<?php echo $i; ?>" <?php if ($i == 0) {
-                                                                                            echo 'class="active"';
-                                                                                        } ?>></li>
+            <li data-target="#bootstrap-touch-slider" data-slide-to="<?php echo $i; ?>" <?php if ($i == 0) { echo 'class="active"'; } ?>></li>
         <?php
             $i++;
         }
@@ -51,7 +51,6 @@ foreach ($result as $row) {
 
     <!-- Wrapper For Slides -->
     <div class="carousel-inner" role="listbox">
-
         <?php
         $i = 0;
         $statement = $pdo->prepare("SELECT * FROM tbl_slider");
@@ -59,40 +58,13 @@ foreach ($result as $row) {
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         foreach ($result as $row) {
         ?>
-            <div class="item <?php if ($i == 0) {
-                                    echo 'active';
-                                } ?>" style="background-image:url(assets/uploads/<?php echo $row['photo']; ?>);">
+            <div class="item <?php if ($i == 0) { echo 'active'; } ?>" style="background-image:url(assets/uploads/<?php echo $row['photo']; ?>);">
                 <div class="bs-slider-overlay"></div>
                 <div class="container">
                     <div class="row">
-                        <div class="slide-text <?php if ($row['position'] == 'Left') {
-                                                    echo 'slide_style_left';
-                                                } elseif ($row['position'] == 'Center') {
-                                                    echo 'slide_style_center';
-                                                } elseif ($row['position'] == 'Right') {
-                                                    echo 'slide_style_right';
-                                                } ?>">
-                            <h1 data-animation="animated <?php if ($row['position'] == 'Left') {
-                                                                echo 'zoomInLeft';
-                                                            } elseif ($row['position'] == 'Center') {
-                                                                echo 'flipInX';
-                                                            } elseif ($row['position'] == 'Right') {
-                                                                echo 'zoomInRight';
-                                                            } ?>"><?php echo $row['heading']; ?></h1>
-                            <p data-animation="animated <?php if ($row['position'] == 'Left') {
-                                                            echo 'fadeInLeft';
-                                                        } elseif ($row['position'] == 'Center') {
-                                                            echo 'fadeInDown';
-                                                        } elseif ($row['position'] == 'Right') {
-                                                            echo 'fadeInRight';
-                                                        } ?>"><?php echo nl2br($row['content']); ?></p>
-                            <!-- <a href="<?php echo $row['button_url']; ?>" target="_blank"  class="btn btn-primary" data-animation="animated <?php if ($row['position'] == 'Left') {
-                                                                                                                                                    echo 'fadeInLeft';
-                                                                                                                                                } elseif ($row['position'] == 'Center') {
-                                                                                                                                                    echo 'fadeInDown';
-                                                                                                                                                } elseif ($row['position'] == 'Right') {
-                                                                                                                                                    echo 'fadeInRight';
-                                                                                                                                                } ?>"><?php echo $row['button_text']; ?></a> -->
+                        <div class="slide-text <?php if ($row['position'] == 'Left') { echo 'slide_style_left'; } elseif ($row['position'] == 'Center') { echo 'slide_style_center'; } elseif ($row['position'] == 'Right') { echo 'slide_style_right'; } ?>">
+                            <h1 data-animation="animated <?php if ($row['position'] == 'Left') { echo 'zoomInLeft'; } elseif ($row['position'] == 'Center') { echo 'flipInX'; } elseif ($row['position'] == 'Right') { echo 'zoomInRight'; } ?>"><?php echo $row['heading']; ?></h1>
+                            <p data-animation="animated <?php if ($row['position'] == 'Left') { echo 'fadeInLeft'; } elseif ($row['position'] == 'Center') { echo 'fadeInDown'; } elseif ($row['position'] == 'Right') { echo 'fadeInRight'; } ?>"><?php echo nl2br($row['content']); ?></p>
                         </div>
                     </div>
                 </div>
@@ -114,11 +86,9 @@ foreach ($result as $row) {
         <span class="fa fa-angle-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-
 </div>
 
-
-<!-- <?php if ($home_service_on_off == 1) : ?>
+<?php if ($home_service_on_off == 1) : ?>
     <div class="service bg-gray">
         <div class="container">
             <div class="row">
@@ -143,138 +113,13 @@ foreach ($result as $row) {
             </div>
         </div>
     </div>
-<?php endif; ?> -->
-
-<!-- <?php if ($home_featured_product_on_off == 1) : ?>
-    <div class="product pt_70 pb_70">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="headline">
-                        <h2><?php echo $featured_product_title; ?></h2>
-                        <h3><?php echo $featured_product_subtitle; ?></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-
-                    <div class="product-carousel">
-
-                        <?php
-                        $statement = $pdo->prepare("SELECT * FROM tbl_product WHERE p_is_featured=? AND p_is_active=? LIMIT " . $total_featured_product_home);
-                        $statement->execute(array(1, 1));
-                        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-                        foreach ($result as $row) {
-                        ?>
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>);"></div>
-                                    <div class="overlay"></div>
-                                </div>
-                                <div class="text">
-                                    <h3><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a></h3>
-                                    <h4>
-                                        Rs.<?php echo $row['p_current_price']; ?>
-                                        <?php if ($row['p_old_price'] != '') : ?>
-                                    <del>
-                                        Rs.<?php echo $row['p_old_price']; ?>
-                                    </del>
-                                    <?php endif; ?>
-                                    </h4>
-                                    <div class="rating">
-                                        <?php
-                                        $t_rating = 0;
-                                        $statement1 = $pdo->prepare("SELECT * FROM tbl_rating WHERE p_id=?");
-                                        $statement1->execute(array($row['p_id']));
-                                        $tot_rating = $statement1->rowCount();
-                                        if ($tot_rating == 0) {
-                                            $avg_rating = 0;
-                                        } else {
-                                            $result1 = $statement1->fetchAll(PDO::FETCH_ASSOC);
-                                            foreach ($result1 as $row1) {
-                                                $t_rating = $t_rating + $row1['rating'];
-                                            }
-                                            $avg_rating = $t_rating / $tot_rating;
-                                        }
-                                        ?>
-                                        <?php
-                                        if ($avg_rating == 0) {
-                                            echo '';
-                                        } elseif ($avg_rating == 1.5) {
-                                            echo '
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-half-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        ';
-                                        } elseif ($avg_rating == 2.5) {
-                                            echo '
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-half-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        ';
-                                        } elseif ($avg_rating == 3.5) {
-                                            echo '
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-half-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        ';
-                                        } elseif ($avg_rating == 4.5) {
-                                            echo '
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-half-o"></i>
-                                        ';
-                                        } else {
-                                            for ($i = 1; $i <= 5; $i++) {
-                                        ?>
-                                                <?php if ($i > $avg_rating) : ?>
-                                                    <i class="fa fa-star-o"></i>
-                                                <?php else : ?>
-                                                    <i class="fa fa-star"></i>
-                                                <?php endif; ?>
-                                        <?php
-                                            }
-                                        }
-                                        ?>
-                                    </div>
-
-                                    <?php if ($row['p_qty'] == 0) : ?>
-                                        <div class="out-of-stock">
-                                            <div class="inner">
-                                                Out Of Stock
-                                            </div>
-                                        </div>
-                                    <?php else : ?>
-                                        <p><a href="product.php?id=<?php echo $row['p_id']; ?>">Add to Cart</a></p>
-                                        <form method="post" action="">
-                                            <input hidden type="text" name="wish_id" value="<?php echo $row['p_id']; ?>">
-                                            <input style="background-color: #0d1452;color:white;padding:7px;border-style: none;margin-left: 65px" type="submit" value="Add to Wishlist" name="form_add_to_wish">
-                                        </form>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        <?php
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<?php endif; ?> -->
+<?php endif; ?>
 
 
 <?php if ($home_latest_product_on_off == 1) : ?>
-    <div class="product bg-gray pt_70 pb_30">
+    <div class="product pt_70 pb_30">
+               
+        <img src="./assets/uploads/cra2.png" alt="crackers" class="image2">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -382,7 +227,7 @@ foreach ($result as $row) {
                                         </div>
                                     <?php else : ?>
                                         <div style="display: flex;">
-                                            <p><a style="margin-left: 50px;" href="product.php?id=<?php echo $row['p_id']; ?>">More Details</a></p>
+                                            <p><a  href="product.php?id=<?php echo $row['p_id']; ?>">More Details</a></p>
                                             <form method="post" action="">
                                                 <input hidden type="text" name="wish_id" value="<?php echo $row['p_id']; ?>">
                                                 <button style="color:white;padding:7px;border-style: none;margin-left: 35px;margin-top:8px;" type="submit" name="form_add_to_wish">
@@ -550,3 +395,19 @@ if (isset($_POST['form_add_to_wish'])) {
 <?php include('footer.php') ?>
 
 <?php include('./footer_bottom.php'); ?>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+$(document).ready(function() {
+    $('#bootstrap-touch-slider').carousel({
+        interval: 5000,
+        pause: "hover",
+        wrap: true
+    });
+});
+</script>
+</body>
