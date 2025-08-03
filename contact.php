@@ -25,16 +25,14 @@ foreach ($result as $row) {
     </div>
 </div>
 
+<section>
 <div class="page">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="row cform">
-                    <div class="col-md-8">
-                        <div class="well well-sm contact-form-box">
-                            <h3 class="contactform-heading">Contact</h3>
+            <div class="well card col-md-6" data-aos="fade-right">
+                <h3 class="card-body">Contact</h3>
 
-                            <?php
+                <?php
                             // After form submit checking everything for email sending
                             if (isset($_POST['form_contact'])) {
 //                                 $error_message = '';
@@ -137,40 +135,34 @@ foreach ($result as $row) {
                 
                             <form action="" method="post">
                                 <?php $csrf->echoInputField(); ?>
-                                <div class="row full-container">
-                                    <div class="col-md-6">
-                                        <div class="form-group font">
+                                        <div class="form-group font mb-5">
                                             <label for="name">Name</label>
                                             <input type="text" class="form-control" name="visitor_name" placeholder="Enter name">
                                         </div>
-                                        <div class="form-group font">
+                                        <div class="form-group font mb-5">
                                             <label for="email">Email Address</label>
                                             <input type="email" class="form-control" name="visitor_email" placeholder="Enter email address">
                                         </div>
-                                        <div class="form-group font">
+                                        <div class="form-group font mb-5">
                                             <label for="email">Phone Number</label>
                                             <input type="text" class="form-control" name="visitor_phone" placeholder="Enter phone number">
                                         </div>
-                                    </div>
-                                    <div class="col-md-6 message-div font">
-                                        <div class="form-group">
+                                        <div class="form-group mb-5">
                                             <label for="name">Message</label>
+
                                             <textarea name="visitor_message" class="form-control" rows="9" cols="25" placeholder="Enter message" style="resize:vertical;"></textarea>
+
                                         </div>
-                                    </div>
-                                    <div class="col-md-12 button-div">
-                                        <input type="submit" value="Send Message" class="btn btn-primary pull-right" name="form_contact">
-                                    </div>
-                                </div>
-                            </form>
+                                            <input type="submit" value="Send Message" class="btn_con btn-primary pull-right" name="form_contact">
+                                </form>
+</div>
+                            <div class="col-md-6" data-aos="fade-left"> 
+                                <!-- <h3>Find Us On Map</h3> -->
+                                <?php echo $contact_map_iframe; ?>
+                            </div> 
                         </div>
-                        
                     </div>
-                </div>
-                    <div class="flex-content"> 
-                        <!-- <h3>Find Us On Map</h3> -->
-                        <?php echo $contact_map_iframe; ?>
-                    </div> 
+
             </div>
         </div>
     </div>
