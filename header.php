@@ -1,4 +1,15 @@
 <!-- This is main configuration File -->
+ <head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
 <?php
 ob_start();
 session_start();
@@ -317,7 +328,7 @@ foreach ($result as $row) {
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 logo">
-					<a href="index.php" style="text-decoration: none;"><img style="border-radius: 50%;padding: 10px" src="assets/uploads/<?php echo $logo; ?>" alt="logo image"></a>
+					<a href="index.php" style="text-decoration: none;"><img style="width: 50px;height: 50px;" src="assets/uploads/<?php echo $logo; ?>" alt="logo image"></a>
 					 <!-- <h3><?php echo $shop_name ?></h3> -->																							
 				</div> 
 				<div class="col-md-6 pl_0 pr_0">
@@ -387,3 +398,9 @@ foreach ($result as $row) {
 			</div>
 		</div>
 	</div>
+
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<script>
+  AOS.init();
+</script>

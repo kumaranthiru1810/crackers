@@ -1,37 +1,58 @@
-<link rel="stylesheet" href="./assets/css/footer_bottom.css">
 
+<link rel="stylesheet" href="bootstrap.main.css">
+<link rel="stylesheet" href="./assets/css/footer_bottom.css">
 <!-- Footer Start -->
 
-<footer style="background-color: #273F4F; color: #EFEEEA; padding: 40px 20px;">
 
-  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
+<footer>
 
-    <div style="flex: 1; min-width: 250px;">
+  <div class="all row">
+    <div class="part1 col-md-5">
 
-      <h2 class="premium-gold-heading">Magical Crackers</h2>
-      <p style="line-height: 2;">Lighring up moments, one sparkle at a time<br>Celebrate safely, celebrate bright.</p>
-
+      <h3 class="premium-gold-heading">Magical Crackers</h3>
+      <span class="under"></span>
+      <p style="line-height: 2;mb-3">Lighring up moments, one sparkle at a time<br>Celebrate safely, celebrate bright.</p>
+      <!-- <i class="icon fa fa-whatsapp"></i>
+      <i class="icon fa fa-facebook"></i>
+      <i class="icon fa fa-instagram"></i>
+      <i class="icon fa fa-twitter"></i> -->
+      <div class="social-icons mb-3">
+              <a href="#facebook" class="social-icon">
+                <i class="icon fa fa-facebook"></i>
+              </a>
+              <a href="#instagram" class="social-icon">
+                <i class="icon fa fa-instagram"></i>
+              </a>
+              <a href="#twitter" class="social-icon">
+                <i class="icon fa fa-twitter"></i>
+              </a>
+              <a href="#website" class="social-icon">
+                <i class="icon fa fa-whatsapp"></i>
+              </a>
+            </div>
     </div>
 
-    <div id="linkes" style="flex: 1; min-width: 200px;">
-      <h2 class="premium-gold-heading">Quick Links</h2>
-      <ul style="list-style: none; padding: 0;">
-        <li><a href="#"> Home</a></li><br>
-        <li><a href="#"> About</a></li><br>
-        <li><a href="#"> Events</a></li><br>
-        <li><a href="#"> Contact</a></li><br>
+    <div id="linkes" class="col-md-3">
+      <h3 class="premium-gold-heading">Quick Links</h3>
+      <span class="under"></span>
+      <ul style="list-style: none; padding: 0;mb-3">
+        <li><i class="fa fa-long-arrow-right"></i><a href="#"> Home</a></li><br>
+        <li><i class="fa fa-long-arrow-right"></i><a href="#"> About</a></li><br>
+        <li><i class="fa fa-long-arrow-right"></i><a href="#"> Events</a></li><br>
+        <li><i class="fa fa-long-arrow-right"></i><a href="#"> Contact</a></li><br>
       </ul>
     </div>
 
-    <div style="flex: 1; min-width: 200px;">
-      <h2 class="premium-gold-heading">Contact Us</h2>
-      <p>Email: support@magicalcrackers.com</p>
-      <p>Phone: +91-98765-43210</p>
+    <div class="col-md-4 last">
+      <h3 class="premium-gold-heading">Contact Us</h3>
+      <span class="under"></span>
+      <p class="mb-3">Email: support@magicalcrackers.com</p>
+      <p class="mb-3">Phone: +91-98765-43210</p>
     </div>
 
   </div>
 
-  <div style="text-align: center; border-top: 1px solid #FFD700; margin-top: 30px; padding-top: 15px; font-size: 14px;font-family: 'Abril Fatface', serif;">
+  <div style="text-align: center; border-top: 1px solid #FFD700; margin-top: 30px; padding-top: 15px; font-size: 14px;font-family: 'Lugrasimo', cursive;">
     © Developed By,<span class="premium-gold-heading">Anjana Infotech.</span> All rights reserved.
   </div>
 </footer>

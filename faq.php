@@ -38,9 +38,9 @@ foreach ($result as $row) {
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" href="#question<?php echo $row['faq_id']; ?>">
+                                    <h5><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" href="#question<?php echo $row['faq_id']; ?>">
                                         <i class="fa fa-question-circle"></i> <?php echo $row['faq_title']; ?>
-                                    </a>
+                                    </a></h5>
                                 </h4>
                             </div>
                             <div id="question<?php echo $row['faq_id']; ?>" class="panel-collapse collapse">
