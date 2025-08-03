@@ -2585,6 +2585,7 @@ div.pagination span.disabled {
     color: #fff;
     padding: 10px;
     border: none;
+
 }
 
 .btn_con:hover{
@@ -2607,9 +2608,10 @@ div.pagination span.disabled {
 .image2{
     position: absolute;
 }
-
 .image3{
     position: absolute;
     right: 0;
     bottom: 0;
 }
+
+

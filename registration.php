@@ -195,14 +195,11 @@ if (isset($_POST['form1'])) {
         <div class="row">
             <div class="col-md-12">
                 <div class="user-content">
-
-                    
-
-                    <form action="" method="post">
+                    <form  action="" method="post">
                         <?php $csrf->echoInputField(); ?>
                         <div class="row">
                             <div class="col-md-2"></div>
-                            <div class="col-md-8">
+                            <div class="col-md-8 card" style="padding:30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
                                 
                                 <?php
                                 if($error_message != '') {
@@ -215,23 +212,23 @@ if (isset($_POST['form1'])) {
 
                                 <div class="col-md-6 form-group">
                                     <label for="">First Name *</label>
-                                    <input type="text" class="form-control" name="cust_name" value="<?php if(isset($_POST['cust_name'])){echo $_POST['cust_name'];} ?>">
+                                    <input type="text" placeholder="Enter your first name" class="form-control" name="cust_name" value="<?php if(isset($_POST['cust_name'])){echo $_POST['cust_name'];} ?>">
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <label for="">Last Name</label>
-                                    <input type="text" class="form-control" name="cust_cname" value="<?php if(isset($_POST['cust_cname'])){echo $_POST['cust_cname'];} ?>">
+                                    <label for="">Last Name *</label>
+                                    <input type="text"  placeholder="Enter your last name" class="form-control" name="cust_cname" value="<?php if(isset($_POST['cust_cname'])){echo $_POST['cust_cname'];} ?>">
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_94; ?> *</label>
-                                    <input type="email" class="form-control" name="cust_email" value="<?php if(isset($_POST['cust_email'])){echo $_POST['cust_email'];} ?>">
+                                    <input type="email" placeholder="Enter your Email" class="form-control" name="cust_email" value="<?php if(isset($_POST['cust_email'])){echo $_POST['cust_email'];} ?>">
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_104; ?> *</label>
-                                    <input type="text" class="form-control" name="cust_phone" value="<?php if(isset($_POST['cust_phone'])){echo $_POST['cust_phone'];} ?>">
+                                    <input type="text" placeholder="Enter your Phone number" class="form-control" name="cust_phone" value="<?php if(isset($_POST['cust_phone'])){echo $_POST['cust_phone'];} ?>">
                                 </div>
                                 <div class="col-md-12 form-group">
                                     <label for=""><?php echo LANG_VALUE_105; ?> *</label>
-                                    <textarea name="cust_address" class="form-control" cols="30" rows="10" style="height:70px;"><?php if(isset($_POST['cust_address'])){echo $_POST['cust_address'];} ?></textarea>
+                                    <textarea name="cust_address" placeholder="Enter your Address" class="form-control" style="resize:vertical; height:150px; width:690px"><?php if(isset($_POST['cust_address'])){echo $_POST['cust_address'];} ?></textarea>
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_106; ?> *</label>
@@ -252,31 +249,32 @@ if (isset($_POST['form1'])) {
                                 
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_107; ?> *</label>
-                                    <input type="text" class="form-control" name="cust_city" value="<?php if(isset($_POST['cust_city'])){echo $_POST['cust_city'];} ?>">
+                                    <input type="text" placeholder="Enter your City" class="form-control" name="cust_city" value="<?php if(isset($_POST['cust_city'])){echo $_POST['cust_city'];} ?>">
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_108; ?> *</label>
-                                    <input type="text" class="form-control" name="cust_state" value="<?php if(isset($_POST['cust_state'])){echo $_POST['cust_state'];} ?>">
+                                    <input type="text" placeholder="Enter your State" class="form-control" name="cust_state" value="<?php if(isset($_POST['cust_state'])){echo $_POST['cust_state'];} ?>">
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_109; ?> *</label>
-                                    <input type="text" class="form-control" name="cust_zip" value="<?php if(isset($_POST['cust_zip'])){echo $_POST['cust_zip'];} ?>">
+                                    <input type="text" placeholder="Enter your Zip Code" class="form-control" name="cust_zip" value="<?php if(isset($_POST['cust_zip'])){echo $_POST['cust_zip'];} ?>">
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_96; ?> *</label>
-                                    <input type="password" class="form-control" name="cust_password">
+                                    <input type="password" placeholder="Enter your Password" class="form-control" name="cust_password">
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_98; ?> *</label>
-                                    <input type="password" class="form-control" name="cust_re_password">
+                                    <input type="password" placeholder="Enter your Password again" class="form-control" name="cust_re_password">
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for=""></label>
-                                    <input type="submit" class="btn btn-primary" value="<?php echo LANG_VALUE_15; ?>" name="form1">
+                                    <input type="submit" class="btn" style=" background-color: #1a1a2e; color:white; border-radius:15px; margin-top:5px;" value="<?php echo LANG_VALUE_15; ?>" name="form1">
                                 </div>
                             </div>
                         </div>                        
                     </form>
+                  
                 </div>                
             </div>
         </div>

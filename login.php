@@ -63,7 +63,7 @@ if(isset($_POST['form1'])) {
                         <?php $csrf->echoInputField(); ?>                  
                         <div class="row">
                             <div class="col-md-4"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 card" style="padding:30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
                                 <?php
                                 if($error_message != '') {
                                     echo "<div class='error' style='padding: 10px;background:#f1f1f1;margin-bottom:20px;'>".$error_message."</div>";
@@ -74,11 +74,11 @@ if(isset($_POST['form1'])) {
                                 ?>
                                 <div class="form-group">
                                     <label for=""><?php echo LANG_VALUE_94; ?> *</label>
-                                    <input type="email" class="form-control" name="cust_email">
+                                    <input type="email" placeholder="Enter your Email" class="form-control" name="cust_email">
                                 </div>
                                 <div class="form-group">
                                     <label for=""><?php echo LANG_VALUE_96; ?> *</label>
-                                    <input type="password" class="form-control" name="cust_password">
+                                    <input type="password"  placeholder="Enter your Password" class="form-control" name="cust_password">
                                 </div>
                                 <div class="form-group">
                                     <label for=""></label>
