@@ -137,19 +137,21 @@ foreach ($result as $row) {
                                 <?php $csrf->echoInputField(); ?>
                                         <div class="form-group font mb-5">
                                             <label for="name">Name</label>
-                                            <input type="text" class="form-control name-input" name="visitor_name" placeholder="Enter name">
+                                            <input type="text" class="form-control" name="visitor_name" placeholder="Enter name">
                                         </div>
                                         <div class="form-group font mb-5">
                                             <label for="email">Email Address</label>
-                                            <input type="email" class="form-control email-input" name="visitor_email" placeholder="Enter email address">
+                                            <input type="email" class="form-control" name="visitor_email" placeholder="Enter email address">
                                         </div>
                                         <div class="form-group font mb-5">
                                             <label for="email">Phone Number</label>
-                                            <input type="text" class="form-control phone-no-input" name="visitor_phone" placeholder="Enter phone number">
+                                            <input type="text" class="form-control" name="visitor_phone" placeholder="Enter phone number">
                                         </div>
                                         <div class="form-group mb-5">
                                             <label for="name">Message</label>
-                                            <textarea name="visitor_message" class="form-control message-input" rows="10" placeholder="Enter message"></textarea>
+
+                                            <textarea name="visitor_message" class="form-control" rows="9" cols="25" placeholder="Enter message" style="resize:vertical;"></textarea>
+
                                         </div>
                                             <input type="submit" value="Send Message" class="btn_con btn-primary pull-right" name="form_contact">
                                 </form>
