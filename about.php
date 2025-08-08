@@ -53,12 +53,12 @@ foreach ($result as $row) {
         
         <p>Magical crackers ignite the imagination and a bring a touch of wonder to every celebration. With an enchanting collections of Magical Fireworks, we turn ordinary moments into unforgettable spectacles<under a starlit sky./p>
         <ul class="feature-list">
-            <li><span class="circle-icon"><i class="fas fa-angle-right icon"></i></span>Offer Dazzling Variety Of Fantasy & Enchanted Fireworks</li>
-            <li><span class="circle-icon"><i class="fas fa-angle-right icon"></i></span>Offer Supreme Quality With Safe And Reliable Sparkle</li>
-            <li><span class="circle-icon"><i class="fas fa-angle-right icon"></i></span>Offer Mystical Designs Inspired By Ancient Legends</li>
-            <li><span class="circle-icon"><i class="fas fa-angle-right icon"></i></span>Offer Spectacular Displays For Festivals & Special Events</li>
-            <li><span class="circle-icon"><i class="fas fa-angle-right icon"></i></span>Offer Dedicated Support To Make Celebrations Hassle-Free</li>
-            <li><span class="circle-icon"><i class="fas fa-angle-right icon"></i></span>Offer High-Quality Magical Crackers At Unbeatable Prices</li>
+            <li><i class="fas fa-angle-right arrow-icon"></i>Offer Dazzling Variety Of Fantasy & Enchanted Fireworks</li>
+            <li><i class="fas fa-angle-right arrow-icon"></i>Offer Supreme Quality With Safe And Reliable Sparkle</li>
+            <li><i class="fas fa-angle-right arrow-icon"></i>Offer Mystical Designs Inspired By Ancient Legends</li>
+            <li><i class="fas fa-angle-right arrow-icon"></i>Offer Spectacular Displays For Festivals & Special Events</li>
+            <li><i class="fas fa-angle-right arrow-icon"></i>Offer Dedicated Support To Make Celebrations Hassle-Free</li>
+            <li><i class="fas fa-angle-right arrow-icon"></i>Offer High-Quality Magical Crackers At Unbeatable Prices</li>
         </ul>
     </div>
 </div>
