@@ -5,6 +5,7 @@
     padding: 0;
 }
 
+
 body {
     font-family: "Mozilla Headline", sans-serif;
     font-weight: 400;
@@ -12,6 +13,7 @@ body {
     padding: 0;
     margin: 0;
 }
+
 
 h1,
 h2,
@@ -1324,7 +1326,9 @@ ul.nav-tabs {
 
 
 /* .page-banner {
-    width: 90%;
+
+    width: 100%;
+
     height: 55vh;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -2393,7 +2397,9 @@ div.pagination span.disabled {
     position: absolute;
     background-color: rgba(33, 82, 125, 0.158);
     content: ''; 
-    /* background-color:black; 
+
+    background-color:black;
+
     width: 100%;
     height: 100%;
     position: absolute;
@@ -2642,3 +2648,472 @@ div.pagination span.disabled {
 }
 
 
+
+/* About page styles */
+/* ------------------------ */
+ 
+
+ .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+    /* align-items: center; */
+    padding: 12rem 10rem;
+    background-color: #fffafa;
+    animation: fadeSlideUp 1.3s ease-out forwards;
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+ .about-content-div{
+    /* height: auto; */
+    width: 100%;
+    /* padding: 0 8rem; */
+ }
+ .our-story-heading{
+    font-size: 5rem;
+    color: #FFD700;
+    margin: 0 0 3rem 0;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.301);
+ }
+ 
+ .about-page-content{
+    font-size: 17px;
+    line-height: 2.1;
+    text-align: justify;
+ }
+ .stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  .stat-item {
+    text-align: center;
+    /* height: 50px; */
+    padding: 2.5rem 1rem;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.082);
+    flex: 1;
+    margin: 0 2rem;
+    transition: 0.3s all ease;
+  }
+  .stat-item h3{
+    font-size: 3rem;
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+    margin-bottom: 0.9rem;
+  }  
+  .mini-para {
+    font-size: 1.5rem;
+    color: #aaaaaa;
+    margin: 0;
+    transition: 0.3s all ease;
+  }
+.stat-item:hover {
+    background: #1a1a2e;
+    color: #fff;
+    transition: .5s;
+    transform: translateY(-5px);
+}
+.stat-item:hover .mini-para{
+    color: white;
+}
+
+.about-content-img img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s all ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.about-content-image img:hover{
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+ .about-main{
+    width: 100%;
+    height: 95vh;
+    /* margin-bottom:20rem; */
+    background: url('../uploads/about-page-banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+ }
+
+.about-main::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.who-we-are{
+    width: 42%;
+    position: absolute;
+    right: 100px;
+    top: 60px;
+    z-index: 2;
+    height: auto;
+    background: linear-gradient(to bottom right , #0c0d1c , #1a1b2c) ;
+    border-radius: 10px;
+    color: white;
+    padding: 35px 60px;
+    transition: .3s all ease;
+}
+.who-we-are:hover{
+    top: 50px;
+}
+.who-we-are h1{
+    font-weight: bold;
+    /* margin-bottom: 2rem; */
+    position: relative;
+    margin-bottom: 4.5rem;
+}
+.line{
+    height: 2.5px;
+    position: absolute;
+    width: 20%;
+    background-color: rgb(255, 60, 60);
+    margin-top: 10px;
+}
+
+.who-we-are p{
+    line-height: 23px;
+    color: #f9f9f9;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+.feature-list{
+    list-style: none;
+    padding: 0;
+}
+.arrow-icon{
+    color: rgb(255, 60, 60);
+
+}
+.feature-list li{
+    margin-left: -7px;
+    margin-bottom: 1rem;
+    color: #f9f9f9;
+    font-weight: 400;
+    transition: 0.2s all ease;
+}
+.feature-list li:hover{
+    padding-left: 3px;
+}
+
+.about-below-main{
+    height: 23vh;
+    background: url("../uploads/about-below-main.jpg") no-repeat 20% 45%/cover;
+    position: relative;
+    margin-bottom: 5rem;
+}
+.about-below-img{
+    padding-top: 55px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+}
+.about-below-main h2{
+    color: white;
+    margin: 0;
+    padding-left: 15rem;
+    font-weight: 700;
+}
+.about-below-main a{
+    text-decoration: none;
+    color: black;
+    background-color: #fff;
+    border: 3px solid white;
+    border-radius: 30px;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight:bold;
+    transition: 0.3s all ease;
+}
+
+.about-below-main a:hover{
+    color: white;
+    /* font-weight: bold; */
+    background: rgba(255, 255, 255, 0);
+}
+.get-an-quote-btn{
+    position: absolute;
+    right: 200px;
+}
+
+.vision-mission {
+    padding: 4rem 0;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section-header h2 {
+    font-size: 4.5rem;
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.301);
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+
+  .section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #d4af37;
+}
+  
+  .section-header p {
+    font-size: 1.7rem;
+    color: #aaaaaa;
+  }
+
+  .vm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  
+  .vm-card {
+    padding: 3.5rem;
+    background-color: #f5f5f5;
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.5s all ease;
+  }
+
+  .vm-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vm-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1.5rem;
+    background-color: #FFD700;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+
+  .vm-card h3 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    color:#2c2c2c;
+    font-weight: 600;
+  }
+  
+  .vm-card p {
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #333333;
+    text-align: justify;
+  }
+
+  .quote-text{
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .quote-text p{
+    font-style: italic;
+  }
+
+
+
+   /* About Page Animations 
+   -------------------------------------------------
+   -------------------------------------------------*/
+
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+    /*  About Page Responsive
+      ---------------------------------------------------------
+      --------------------------------------------------------- */
+
+    /* ---------------   Laptop L - 1440px   ---------------------- */
+
+    /* @media(min-width:1440px){
+        .stat-item{
+            padding: 4rem 1rem;
+        }
+        .about-main{
+            height: 70vh;
+            width: 100%;
+        }
+        .about-below-main{
+            height:15vh;
+        }
+        .about-below-main h2{
+            padding-left: 20rem;
+        }
+    } */
+
+    /* -----------------   Tablet - 768px   -------------------- */
+
+  @media (max-width: 768px) {   
+    .about-grid {
+      grid-template-columns: 1fr;
+    } 
+    .vm-grid {
+      grid-template-columns: 1fr;
+    }
+    .about-main{
+        height: 65vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .who-we-are{
+        width: 75%;
+    }
+    .about-below-main{
+        height: 17vh;
+    }
+    .about-below-main h2{
+        padding-left: 6rem;
+        font-size: 2.4rem;
+    }
+    .get-an-quote-btn{
+        right:80px;
+    }
+  }
+
+    /* -------------------   Mobile L - 425px   --------------------- */
+
+    @media(max-width:425px){
+        .about-grid{
+            padding: 10rem 5.5rem;
+        }
+        .who-we-are{
+            width: 80%;
+            padding: 15px 25px;
+            top: 25px;
+            right: 50px;
+        }
+        .who-we-are h1{
+            margin-bottom: 2rem;
+            font-size: 17px;
+        }
+        .about-below-main{
+            height: 10vh;
+        }
+        .about-below-main h2{
+            margin-top: -15px;
+            font-size: 15px;
+            padding-left: 2rem;
+        }
+        .about-below-main a{
+            border: 2px solid white;
+            padding: 10px 25px;
+            font-size: 9px;
+        }
+        .get-an-quote-btn{
+            right: 20px;
+            top: 40px;
+        }
+    }
+
+    /* ------------------   Mobile M   ------------------------- */
+
+    @media(max-width:375px){
+        .about-grid{
+            padding: 5rem 2.5rem;
+        }
+        .our-story-heading{
+            font-size: 4rem;
+            padding: 0 0 1.5rem 0;
+            margin-bottom: 0;
+        }
+        .about-page-content{
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        .who-we-are{
+            top: 20px;
+            right: 20px;
+            width: 90%;
+        }
+        .about-below-main{
+            margin-bottom: 3rem;
+        }
+        .about-below-main h2{
+            font-size: 14px;
+            padding-left: 1.5rem;
+        }
+        .about-below-main a{
+            padding: 10px 20px;
+            font-size: 9px;
+        }
+        .vision-mission{
+            padding: 1rem 0;
+        }
+        .section-header h2{
+            font-size: 4rem;
+        }
+    }
+
+    /* ------------------------   Mobile S   ----------------------------- */
+    @media(max-width:320px){
+        .who-we-are p{
+            line-height: 22px;
+            margin-bottom: 2.2rem;
+        }
+        .feature-list li{
+            margin-bottom: 0.8rem;
+        }
+        .about-below-main h2{
+            font-size: 12px;
+        }
+        .about-below-main a{
+            padding: 7px 13px;
+        }
+        .get-an-quote-btn{
+            right: 10px;
+        }
+    }
+
+  @media (max-width: 576px) {
+    .advantages-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .stats-container {
+      flex-direction: column;
+    }
+    
+    .stat-item {
+      margin: 0.5rem 0;
+    }
+  }
