@@ -29,8 +29,8 @@ foreach ($result as $row) {
 <div class="page">
     <div class="container">
         <div class="row">
-            <div class="well card col-md-6" data-aos="fade-right">
-                <h3 class="card-body">Contact</h3>
+            <div class="well card col-md-6">
+                <h3>Contact</h3>
 
                 <?php
                             // After form submit checking everything for email sending
@@ -156,7 +156,7 @@ foreach ($result as $row) {
                                             <input type="submit" value="Send Message" class="btn_con btn-primary pull-right" name="form_contact">
                                 </form>
 </div>
-                            <div class="col-md-6" data-aos="fade-left"> 
+                            <div class="col-md-6"> 
                                 <!-- <h3>Find Us On Map</h3> -->
                                 <?php echo $contact_map_iframe; ?>
                             </div> 

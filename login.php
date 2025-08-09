@@ -82,7 +82,7 @@ if(isset($_POST['form1'])) {
                                 </div>
                                 <div class="form-group">
                                     <label for=""></label>
-                                    <input type="submit" class="btn btn-primary" value="<?php echo LANG_VALUE_4; ?>" name="form1">
+                                    <input type="submit" class="btn_con" value="<?php echo LANG_VALUE_4; ?>" name="form1">
                                 </div>
                                 <a href="forget-password.php" style="color:#e4144d;"><?php echo LANG_VALUE_97; ?></a>
                             </div>
@@ -95,3 +95,5 @@ if(isset($_POST['form1'])) {
 </div>
 
 <?php require_once('footer.php'); ?>
+
+<?php include('./footer_bottom.php'); ?>

@@ -89,7 +89,7 @@ if(isset($_POST['form1'])) {
                             <?php $csrf->echoInputField(); ?>
                             <div class="row">
                                 <div class="col-md-4"></div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 card">
                                     <div class="form-group">
                                         <label for=""><?php echo LANG_VALUE_100; ?> *</label>
                                         <input type="password" class="form-control" name="cust_new_password">
@@ -114,3 +114,5 @@ if(isset($_POST['form1'])) {
 </div>
 
 <?php require_once('footer.php'); ?>
+
+<?php include('./footer_bottom.php');  ?>

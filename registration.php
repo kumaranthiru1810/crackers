@@ -228,11 +228,11 @@ if (isset($_POST['form1'])) {
                                 </div>
                                 <div class="col-md-12 form-group">
                                     <label for=""><?php echo LANG_VALUE_105; ?> *</label>
-                                    <textarea name="cust_address" placeholder="Enter your Address" class="form-control" style="resize:vertical; height:150px; width:690px"><?php if(isset($_POST['cust_address'])){echo $_POST['cust_address'];} ?></textarea>
+                                    <textarea name="cust_address" placeholder="Enter your Address" class="form-control" style="resize:vertical" row="4"><?php if(isset($_POST['cust_address'])){echo $_POST['cust_address'];} ?></textarea>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <label for=""><?php echo LANG_VALUE_106; ?> *</label>
-                                    <select name="cust_country" class="form-control select2">
+                                    <label for=""><?php echo LANG_VALUE_106; ?> *</label><br>
+                                    <select name="cust_country" class="form-control">
                                         <option value="">Select country</option>
                                     <?php
                                     $statement = $pdo->prepare("SELECT * FROM tbl_country ORDER BY country_name ASC");
@@ -269,7 +269,7 @@ if (isset($_POST['form1'])) {
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for=""></label>
-                                    <input type="submit" class="btn" style=" background-color: #1a1a2e; color:white; border-radius:15px; margin-top:5px;" value="<?php echo LANG_VALUE_15; ?>" name="form1">
+                                    <input type="submit" class="btn_con" value="<?php echo LANG_VALUE_15; ?>" name="form1">
                                 </div>
                             </div>
                         </div>                        
@@ -282,3 +282,5 @@ if (isset($_POST['form1'])) {
 </div>
 
 <?php require_once('footer.php'); ?>
+
+<?php include('./footer_bottom.php'); ?>

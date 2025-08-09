@@ -87,14 +87,14 @@ if(isset($_POST['form1'])) {
                         <?php $csrf->echoInputField(); ?>
                         <div class="row">
                             <div class="col-md-4"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 card" style="padding:30px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
                                 <div class="form-group">
                                     <label for=""><?php echo LANG_VALUE_94; ?> *</label>
                                     <input type="email" class="form-control" name="cust_email">
                                 </div>
                                 <div class="form-group">
                                     <label for=""></label>
-                                    <input type="submit" class="btn btn-primary" value="<?php echo LANG_VALUE_4; ?>" name="form1">
+                                    <input type="submit" class="btn_con" value="<?php echo LANG_VALUE_4; ?>" name="form1">
                                 </div>
                                 <a href="login.php" style="color:#e4144d;"><?php echo LANG_VALUE_12; ?></a>
                             </div>
@@ -107,3 +107,5 @@ if(isset($_POST['form1'])) {
 </div>
 
 <?php require_once('footer.php'); ?>
+
+<?php include('./footer_bottom.php'); ?>
