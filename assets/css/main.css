@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: "Lugrasimo", cursive;
+    font-family: "Mozilla Headline", sans-serif;
     font-weight: 400;
     font-style: normal;
     padding: 0;
@@ -19,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Mozilla Headline", sans-serif;
 }
 
 a {
@@ -118,12 +118,33 @@ a:hover {
     float: right;
 }
 
+@media(max-width:425px){
+    .top .right{
+        margin-right: 90px;
+    }
+}
+
+
 .btn {
     border-radius: 25px;
     font-size: 15px;
     margin-right: 20px;
     background-color: #FFD700;
     color: #fff;
+}
+@media(max-width:375px){
+    .btn {
+    border-radius: 25px;
+    font-size: 10px;
+    margin-right: 10px;
+    }
+}
+
+@media(max-width:320px){
+    .top .right{
+        /* margin-right: -5px; */
+        margin-left: 50px;
+    }
 }
 .btn a{
     color: #fff;
@@ -135,6 +156,7 @@ a:hover {
 .btn a:hover{
     color: #FFD700;
 }
+
 
 
 .top .right ul {
@@ -2499,6 +2521,7 @@ div.pagination span.disabled {
 }
 
 .panel-body p {
+    font-family: "Mozilla Headline", sans-serif;
     color: #555;
     line-height: 1.7;
 }
@@ -2598,7 +2621,6 @@ div.pagination span.disabled {
 }
 .well h3{
     text-align: center;
-    font-family: "Lugrasimo", cursive;
 }
 
 .panel-body p{
@@ -2607,6 +2629,11 @@ div.pagination span.disabled {
 
 .image2{
     position: absolute;
+}
+@media(max-width:375px){
+    .image2{
+        display:none;
+    }
 }
 .image3{
     position: absolute;

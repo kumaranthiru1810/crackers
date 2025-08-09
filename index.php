@@ -1,5 +1,5 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<body style="padding:0;">
+<body>
 <?php require_once('header.php'); ?>
 
 <?php
