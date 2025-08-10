@@ -1,3 +1,4 @@
+<body style="padding:0px;">
 <?php require_once('header.php'); ?>
 
 <?php
@@ -171,3 +172,4 @@ foreach ($result as $row) {
 <?php require_once('footer.php'); ?>
 
 <?php include('./footer_bottom.php'); ?>
+                        </body>

@@ -1,3 +1,9 @@
+<?php session_start();
+if(!isset($_SESSION['cust_name'])){
+    echo "<script> alert('You are not login')
+    window.location.href='login.php' </script>";
+    exit;
+} ?>
 <?php require_once('header.php'); ?>
 
 <?php
@@ -113,6 +119,8 @@ if ($tot_rating == 0) {
 }
 
 if (isset($_POST['form_add_to_cart'])) {
+
+    // if($_SESSION['cust_name']!=NULL){
 
     // getting the currect stock of this product
     // echo "<script>alert('Add to Card successfully')</script>";
@@ -280,6 +288,14 @@ if ($success_message1 != '') {
     header('location: product.php?id=' . $_REQUEST['id']);
 }
 ?>
+
+<!-- <?php
+// }
+        // else{
+        //     echo "<script>alert('You are not login')</script>";
+        //     header('location:login.php');
+        // }
+        ?> -->
 
 
 <div class="page">
