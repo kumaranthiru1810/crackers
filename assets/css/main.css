@@ -151,16 +151,17 @@ a:hover {
         margin-left: 5px;
     }
 }
-.btn a{
-    color: #fff;
+.btn{
+    color: #1a1a2e;
 }
 .btn:hover{
     background-color: #1a1a2e;
+    color: #FFD700;
     box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
 }
-.btn a:hover{
+/* .btn:hover{
     color: #FFD700;
-}
+} */
 
 
 
@@ -2681,6 +2682,7 @@ div.pagination span.disabled {
  }
  
  .about-page-content{
+    font-family:"Mozilla Headline", sans-serif;
     font-size: 17px;
     line-height: 2.1;
     text-align: justify;
@@ -3125,6 +3127,7 @@ div.pagination span.disabled {
 
 
 
+
   /* -------------------------   Login Page Styles   ---------------------------- */
 
   .dont-have-account{
@@ -3156,7 +3159,7 @@ div.pagination span.disabled {
 }
 
 
-
+/*  */
 
 /* ---------------------------------   TOP  NAVBAR  STYLES   --------------------------------------- */
 
@@ -3213,7 +3216,7 @@ div.pagination span.disabled {
 @media(max-width:425px){
     .top-header{
         display: flex;
-        flex-direction: column;
+/*         flex-direction: column; */
         align-items: center;
     }
     .top-navbar-user{
@@ -3257,3 +3260,4 @@ div.pagination span.disabled {
     }
     
 }
+

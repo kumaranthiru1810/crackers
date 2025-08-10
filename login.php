@@ -1,4 +1,8 @@
+
 <?php session_start();?>
+
+
+<body style="padding:0px;">
 
 <?php require_once('header.php'); ?>
 <?php
@@ -91,7 +95,9 @@ if(isset($_POST['form1'])) {
                                     <label for=""></label>
                                     <input type="submit" class="btn_con" value="<?php echo LANG_VALUE_4; ?>" name="form1">
                                 </div>
+
                                 <a href="forget-password.php" class="forgot-password"><?php echo LANG_VALUE_97; ?>?</a>
+
                             </div>
                         </div>                        
                     </form>
@@ -104,3 +110,5 @@ if(isset($_POST['form1'])) {
 <?php require_once('footer.php'); ?>
 
 <?php include('./footer_bottom.php'); ?>
+
+                            </body>

@@ -1,12 +1,12 @@
 <!-- This is main configuration File -->
  <head>
-	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -269,6 +269,7 @@ foreach ($result as $row) {
 					</div>
 				</div>
 					<div class="right">
+
 						<?php if(isset($_SESSION['cust_name'])){ ?>
 						   <div class="top-navbar">
 									<p class="top-navbar-user btn_con"><i class="fa-solid fa-user"></i><?php echo $_SESSION['cust_name'] ?></p>
@@ -278,6 +279,7 @@ foreach ($result as $row) {
 						<a href="login.php" class="btn"><i class="fa fa-sign-in"></i> <?php echo LANG_VALUE_9; ?></a>
 						<a href="registration.php" class="btn register-btn"><i class="fa fa-user-plus"></i> <?php echo LANG_VALUE_15; ?></a>
 						<?php } ?>
+
 						<!-- <ul>
 							<?php
 							$statement = $pdo->prepare("SELECT * FROM tbl_social");
@@ -336,11 +338,11 @@ foreach ($result as $row) {
 	<div class="nav">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 logo">
+				<div class="col-md-5 logo">
 					<a href="index.php" style="text-decoration: none;"><img style="width: 50px;height: 50px;" src="assets/uploads/<?php echo $logo; ?>" alt="logo image"></a>
 					 <!-- <h3><?php echo $shop_name ?></h3> -->																							
 				</div> 
-				<div class="col-md-6 pl_0 pr_0">
+				<div class="col-md-7 pl_0 pr_0">
 					<div class="menu-container">
 						<div class="menu">
 							<ul>
@@ -400,6 +402,28 @@ foreach ($result as $row) {
 								<li><a href="faq.php"><?php echo $faq_title; ?></a></li>
 
 								<li><a href="contact.php"><?php echo $contact_title; ?></a></li>
+								<li><a href="cart.php"><?php echo LANG_VALUE_19; ?>( <?php
+																																			if (isset($_SESSION['cart_p_id'])) {
+																																				$table_total_price = 0;
+																																				$i = 0;
+																																				foreach ($_SESSION['cart_p_qty'] as $key => $value) {
+																																					$i++;
+																																					$arr_cart_p_qty[$i] = $value;
+																																				}
+																																				$i = 0;
+																																				foreach ($_SESSION['cart_p_current_price'] as $key => $value) {
+																																					$i++;
+																																					$arr_cart_p_current_price[$i] = $value;
+																																				}
+																																				for ($i = 1; $i <= count($arr_cart_p_qty); $i++) {
+																																					$row_total_price = $arr_cart_p_current_price[$i] * $arr_cart_p_qty[$i];
+																																					$table_total_price = $table_total_price + $row_total_price;
+																																				}
+																																				echo $table_total_price;
+																																			} else {
+																																				echo '0.00';
+																																			}
+																																			?>)</a></li>
 							</ul>
 						</div>
 					</div>

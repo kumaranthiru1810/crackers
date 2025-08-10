@@ -217,3 +217,5 @@ if(isset($_POST['form1'])) {
 
 
 <?php require_once('footer.php'); ?>
+
+<?php include('./footer_bottom.php'); ?>
