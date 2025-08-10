@@ -1,3 +1,4 @@
+<body style="padding:0px;">
 <?php require_once('header.php'); ?>
 
 <?php

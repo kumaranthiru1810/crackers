@@ -6,7 +6,7 @@
 
 <footer>
   <img src="./assets/uploads/down1(5)-bg.png" alt="banner" class="footer_img">
-  <div class="container">
+  <!-- <div class="container"> -->
   <div class="all row">
     <div class="part1 col-md-5">
 
@@ -51,11 +51,11 @@
       <p class="mb-3">Email: support@magicalcrackers.com</p>
       <p class="mb-3">Phone: +91-98765-43210</p>
     </div>
-
+  <img src="./assets/uploads/cra1.png" alt="banner" class="footer_img2">
   </div>
 
-  <div style="text-align: center; border-top: 1px solid #FFD700; margin-top: 30px; padding-top: 15px; font-size: 14px;">
+  <div style="text-align: center; border-top: 1px solid #31312eff; margin-top: 30px; padding-top: 15px; font-size: 14px;">
     © Developed By , <span class="premium-gold-heading">Anjana Infotech . </span> All rights reserved.
   </div>
-  </div>
+  <!-- </div> -->
 </footer>

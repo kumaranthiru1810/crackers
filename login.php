@@ -1,3 +1,4 @@
+<body style="padding:0px;">
 <?php require_once('header.php'); ?>
 <?php
 $statement = $pdo->prepare("SELECT * FROM tbl_settings WHERE id=1");
@@ -84,7 +85,14 @@ if(isset($_POST['form1'])) {
                                     <label for=""></label>
                                     <input type="submit" class="btn_con" value="<?php echo LANG_VALUE_4; ?>" name="form1">
                                 </div>
-                                <a href="forget-password.php" style="color:#e4144d;"><?php echo LANG_VALUE_97; ?></a>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a href="forget-password.php" style="color:#e4144d;"><?php echo LANG_VALUE_97; ?></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="registration.php" style="color:#e4144d;"><?php echo "Register"; ?></a>
+                                </div>
+                                </div>
                             </div>
                         </div>                        
                     </form>
@@ -97,3 +105,5 @@ if(isset($_POST['form1'])) {
 <?php require_once('footer.php'); ?>
 
 <?php include('./footer_bottom.php'); ?>
+
+                            </body>
