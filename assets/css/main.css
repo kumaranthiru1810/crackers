@@ -3216,7 +3216,7 @@ div.pagination span.disabled {
 @media(max-width:425px){
     .top-header{
         display: flex;
-/*         flex-direction: column; */
+        flex-direction: column;
         align-items: center;
     }
     .top-navbar-user{
