@@ -692,7 +692,7 @@ if ($success_message1 != '') {
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 card">
 
                 <div class="product-carousel">
 
@@ -702,12 +702,12 @@ if ($success_message1 != '') {
                     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                     foreach ($result as $row) {
                     ?>
-                        <div class="item">
+                        <div class="item card">
                             <div class="thumb">
                                 <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>);"></div>
                                 <div class="overlay"></div>
                             </div>
-                            <div class="text">
+                            <div class="text card-body">
                                 <h3><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a></h3>
                                 <!-- <h4>
                                     <?php echo LANG_VALUE_1; ?><?php echo $row['p_current_price']; ?> 
@@ -780,9 +780,9 @@ if ($success_message1 != '') {
                                         }
                                     }
                                     ?>
+                                </div>  
+                                 <p><a href="product.php?id=<?php echo $row['p_id']; ?>">More Details</a></p>
                                 </div>
-                                <p><a href="product.php?id=<?php echo $row['p_id']; ?>">More Details</a></p>
-                            </div>
                         </div>
                     <?php
                     }
