@@ -115,6 +115,7 @@ if ($tot_rating == 0) {
 if (isset($_POST['form_add_to_cart'])) {
 
     // getting the currect stock of this product
+    // echo "<script>alert('Add to Card successfully')</script>";
     $statement = $pdo->prepare("SELECT * FROM tbl_product WHERE p_id=?");
     $statement->execute(array($_REQUEST['id']));
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -698,7 +699,8 @@ if ($success_message1 != '') {
 
                     <?php
                     $statement = $pdo->prepare("SELECT * FROM tbl_product");
-                    $statement->execute(array($ecat_id, $_REQUEST['id']));
+                    // $statement->execute(array($ecat_id, $_REQUEST['id']));
+                    $statement->execute();
                     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                     foreach ($result as $row) {
                     ?>
@@ -796,3 +798,5 @@ if ($success_message1 != '') {
 </div>
 
 <?php require_once('footer.php'); ?>
+
+<?php include('./footer_bottom.php'); ?>

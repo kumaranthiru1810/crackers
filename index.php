@@ -140,15 +140,26 @@ foreach ($result as $row) {
                         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                         foreach ($result as $row) {
                         ?>
+                        <!-- <div class="slide">
+                    <div class="product-card">
+                        <div class="new-badge">New</div>
+                        <img src="./assets/uploads/<?php echo $row['p_featured_photo']; ?>" alt="Nike Air Max" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Nike Air Max</h3>
+                            <div class="product-price">$129.99</div>
+                            <p class="product-description">Premium running shoes with advanced air cushioning technology for maximum comfort and performance</p>
+                        </div>
+                    </div>
+                </div> -->
                             <div class="item" style="box-shadow: 0 0 3px rgba(255, 100, 0, 0.3);">
-                                <div class="thumb">
-                                    <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>);"></div>
+                                <a  href="product.php?id=<?php echo $row['p_id']; ?>"><div class="thumb">
+                                     <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>);"></div>
                                     <div class="overlay"></div>
-                                </div>
+                                </div></a>
                                 <div class="text">
                                     <h3><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a></h3>
                                     <h4>
-                                        <!-- Rs.<?php echo $row['p_current_price']; ?> -->
+                                        ₹<?php echo $row['p_current_price']; ?>
                                         <!-- <?php if ($row['p_old_price'] != '') : ?>
                                     <del>
                                         Rs.<?php echo $row['p_old_price']; ?>
@@ -226,7 +237,7 @@ foreach ($result as $row) {
                                             </div>
                                         </div>
                                     <?php else : ?>
-                                        <div style="display: flex;">
+                                        <!-- <div style="display: flex;">
                                             <p><a  href="product.php?id=<?php echo $row['p_id']; ?>">More Details</a></p>
                                             <form method="post" action="">
                                                 <input hidden type="text" name="wish_id" value="<?php echo $row['p_id']; ?>">
@@ -234,7 +245,7 @@ foreach ($result as $row) {
                                                     <img src="assets/uploads/wishlist.png" width="30" height="30" alt="">
                                                 </button>
                                             </form>
-                                        </div>
+                                        </div> -->
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -283,11 +294,11 @@ foreach ($result as $row) {
                                     <h3><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a></h3>
                                     <h4>
                                         Rs.<?php echo $row['p_current_price']; ?>
-                                        <?php if ($row['p_old_price'] != '') : ?>
+                                        <!-- <?php if ($row['p_old_price'] != '') : ?>
                                             <del>
                                                 Rs.<?php echo $row['p_old_price']; ?>
                                             </del>
-                                        <?php endif; ?>
+                                        <?php endif; ?> -->
                                     </h4>
                                     <div class="rating">
                                         <?php
@@ -389,7 +400,6 @@ if (isset($_POST['form_add_to_wish'])) {
 }
 
 ?>
-
 
 
 <?php include('footer.php') ?>

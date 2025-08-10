@@ -270,3 +270,5 @@ if (!isset($_REQUEST['id']) || !isset($_REQUEST['type'])) {
 </div>
 
 <?php require_once('footer.php'); ?>
+
+<?php include('./footer_bottom.php'); ?>
