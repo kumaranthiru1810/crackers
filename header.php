@@ -11,12 +11,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <?php
 ob_start();
-session_start();
 include("admin/inc/config.php");
 include("admin/inc/functions.php");
 include("admin/inc/CSRF_Protect.php");
@@ -259,8 +258,8 @@ foreach ($result as $row) {
 	<!-- top bar -->
 	 <div class="top">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-sm-6 col-xs-12">
+			<div class="row top-header">
+				<div class="col-md-9 col-sm-8 col-xs-12">
 					<div class="left">
 						<ul>
 							<li><i class="fa fa-phone"></i> <?php echo $contact_phone; ?></li>
@@ -270,18 +269,17 @@ foreach ($result as $row) {
 					</div>
 				</div>
 					<div class="right">
-						<a href="login.php" class="btn"><i class="fa fa-sign-in"></i> <?php
 
-if (!isset($_SESSION['user_id'])) {
-    // User is not logged in — show login/register text
-    echo LANG_VALUE_9 . '/' . LANG_VALUE_15;
-} else {
-    // User is logged in — show their name
-    echo '<a href="#" class="btn">' . htmlspecialchars($_SESSION['user_name']) . '</a>';
-}
-?></a>
-						<!-- <a href="registration.php" class="btn"><i class="fa fa-user-plus"></i></a> -->
-						
+						<?php if(isset($_SESSION['cust_name'])){ ?>
+						   <div class="top-navbar">
+									<p class="top-navbar-user btn_con"><i class="fa-solid fa-user"></i><?php echo $_SESSION['cust_name'] ?></p>
+									<a href="./logout.php" class="top-navbar-logout"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+						   </div>
+						<?php }else{ ?>
+						<a href="login.php" class="btn"><i class="fa fa-sign-in"></i> <?php echo LANG_VALUE_9; ?></a>
+						<a href="registration.php" class="btn register-btn"><i class="fa fa-user-plus"></i> <?php echo LANG_VALUE_15; ?></a>
+						<?php } ?>
+
 						<!-- <ul>
 							<?php
 							$statement = $pdo->prepare("SELECT * FROM tbl_social");

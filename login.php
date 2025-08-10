@@ -1,4 +1,9 @@
+
+<?php session_start();?>
+
+
 <body style="padding:0px;">
+
 <?php require_once('header.php'); ?>
 <?php
 $statement = $pdo->prepare("SELECT * FROM tbl_settings WHERE id=1");
@@ -38,7 +43,9 @@ if(isset($_POST['form1'])) {
                     $error_message .= LANG_VALUE_148.'<br>';
                 } else {
                     $_SESSION['customer'] = $row;
-                    header("location: dashboard.php");
+                    $_SESSION['cust_name'] = $row['cust_name'];
+                    $_SESSION['cust_id'] = $row['cust_id'];
+                    header('Location: index.php');
                 }
             }
             
@@ -82,17 +89,15 @@ if(isset($_POST['form1'])) {
                                     <input type="password"  placeholder="Enter your Password" class="form-control" name="cust_password">
                                 </div>
                                 <div class="form-group">
+                                    <a href="./registration.php" class="dont-have-account">Don't Have an Account ?</a>
+                                </div>
+                                <div class="form-group">
                                     <label for=""></label>
                                     <input type="submit" class="btn_con" value="<?php echo LANG_VALUE_4; ?>" name="form1">
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <a href="forget-password.php" style="color:#e4144d;"><?php echo LANG_VALUE_97; ?></a>
-                                </div>
-                                <div class="col-md-6">
-                                    <a href="registration.php" style="color:#e4144d;"><?php echo "Register"; ?></a>
-                                </div>
-                                </div>
+
+                                <a href="forget-password.php" class="forgot-password"><?php echo LANG_VALUE_97; ?>?</a>
+
                             </div>
                         </div>                        
                     </form>
