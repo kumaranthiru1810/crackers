@@ -1,3 +1,4 @@
+<body style="padding:0px;">
 <?php require_once('header.php'); ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -114,3 +115,5 @@ foreach ($result as $row) {
 <?php require_once('footer.php'); ?>
 
 <?php include('./footer_bottom.php'); ?>
+
+</body>

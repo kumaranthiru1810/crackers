@@ -272,8 +272,8 @@ footer{
     .footer_img2{
         position: absolute;
         right: 0;
-        bottom: 0;
-        width: 300px;
+        bottom: 33px;
+        width: 278px;
         height: 300px;
     }
 }
