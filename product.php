@@ -783,11 +783,9 @@ if ($success_message1 != '') {
                                     }
                                     ?>
                                 </div>  
-                                 <p><a href="product.php?id=<?php echo $row['p_id']; ?>">More Details</a></p>
-                                </div>
-                        </div>
+                                
                     <?php
-                    }
+                    
                     ?>
 
                 </div>
