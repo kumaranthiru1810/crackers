@@ -1,18 +1,19 @@
 <!-- This is main configuration File -->
- <head>
+
+<head>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <?php
 ob_start();
@@ -249,99 +250,25 @@ foreach ($result as $row) {
 
 <body>
 
+	<?php
+	$current_page = basename($_SERVER['PHP_SELF']);
+	?>
+
 	<?php echo $after_body; ?>
 	<!--
 <div id="preloader">
 	<div id="status"></div>
 </div>-->
 
-	<!-- top bar -->
-	 <div class="top">
-		<div class="container">
-			<div class="row top-header">
-				<div class="col-md-9 col-sm-8 col-xs-12">
-					<div class="left">
-						<ul>
-							<li><i class="fa fa-phone"></i> <?php echo $contact_phone; ?></li>
-							<li><i class="fa fa-envelope-o"></i> <?php echo $contact_email; ?></li>
-							
-						</ul>
-					</div>
-				</div>
-					<div class="right">
 
-						<?php if(isset($_SESSION['cust_name'])){ ?>
-						   <div class="top-navbar">
-									<p class="top-navbar-user btn_con"><i class="fa-solid fa-user"></i><?php echo $_SESSION['cust_name'] ?></p>
-									<a href="./logout.php" class="top-navbar-logout"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
-						   </div>
-						<?php }else{ ?>
-						<a href="login.php" class="btn"><i class="fa fa-sign-in"></i> <?php echo LANG_VALUE_9; ?></a>
-						<a href="registration.php" class="btn register-btn"><i class="fa fa-user-plus"></i> <?php echo LANG_VALUE_15; ?></a>
-						<?php } ?>
 
-						<!-- <ul>
-							<?php
-							$statement = $pdo->prepare("SELECT * FROM tbl_social");
-							$statement->execute();
-							$result = $statement->fetchAll(PDO::FETCH_ASSOC);
-							foreach ($result as $row) {
-							?>
-								<?php if ($row['social_url'] != '') : ?>
-									<li><a href="<?php echo $row['social_url']; ?>"><i class="<?php echo $row['social_icon']; ?>"></i></a></li>
-								<?php endif; ?>
-							<?php
-							}
-							?>
-						</ul> 
-
-						<!-- <li><a href="cart.php"><i class="fa fa-shopping-cart"></i> <?php echo LANG_VALUE_19; ?> (<img src="./assets/uploads/rupee-indian.png" width="15px"><?php
-																																			if (isset($_SESSION['cart_p_id'])) {
-																																				$table_total_price = 0;
-																																				$i = 0;
-																																				foreach ($_SESSION['cart_p_qty'] as $key => $value) {
-																																					$i++;
-																																					$arr_cart_p_qty[$i] = $value;
-																																				}
-																																				$i = 0;
-																																				foreach ($_SESSION['cart_p_current_price'] as $key => $value) {
-																																					$i++;
-																																					$arr_cart_p_current_price[$i] = $value;
-																																				}
-																																				for ($i = 1; $i <= count($arr_cart_p_qty); $i++) {
-																																					$row_total_price = $arr_cart_p_current_price[$i] * $arr_cart_p_qty[$i];
-																																					$table_total_price = $table_total_price + $row_total_price;
-																																				}
-																																				echo $table_total_price;
-																																			} else {
-																																				echo '0.00';
-																																			}
-																																			?>)</a></li>
-						<li><a href="wishlist.php"><image src="./assets/uploads/like.png" width="20"> Wishlist</a></li>
-					</ul>
-				</div>
-				<!-- <div class="col-md-4 search-area">
-					<form class="navbar-form navbar-left" role="search" action="search-result.php" method="get">
-						<?php $csrf->echoInputField(); ?>
-						<div class="form-group">
-							<input type="text" class="form-control search-top" placeholder="<?php echo LANG_VALUE_2; ?>" name="search_text" id="input_size">
-						</div>
-						<button type="submit" class="btn btn-default"><?php echo LANG_VALUE_3; ?></button>
-					</form>
-				</div> 
-					</div> -->
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="nav">
+	<div class="nav backdrop-blur-lg bg-opacity-50">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5 logo">
-					<a href="index.php" style="text-decoration: none;"><img style="width: 50px;height: 50px;" src="assets/uploads/<?php echo $logo; ?>" alt="logo image"></a>
-					 <!-- <h3><?php echo $shop_name ?></h3> -->																							
-				</div> 
+				<div class="col-md-3" style="margin-top: 6px;">
+					<!-- <img style="width: 50px;height: 50px;" src="assets/uploads/<?php echo $logo; ?>" alt="logo image"></a> -->
+					<h3><a href="index.php" style="text-decoration: none;"><?php echo $shop_name ?></a></h3>
+				</div>
 				<div class="col-md-7 pl_0 pr_0">
 					<div class="menu-container">
 						<div class="menu">
@@ -362,7 +289,7 @@ foreach ($result as $row) {
 								?>
 								<li><a href="index.php" id="homehov">Home</a></li>
 
-								<li><a href="about.php"><?php echo $about_title; ?></a></li>
+
 								<?php
 								$statement = $pdo->prepare("SELECT * FROM tbl_top_category WHERE show_on_menu=1");
 								$statement->execute();
@@ -399,34 +326,46 @@ foreach ($result as $row) {
 								<?php
 								}
 								?>
-								<li><a href="faq.php"><?php echo $faq_title; ?></a></li>
-
 								<li><a href="contact.php"><?php echo $contact_title; ?></a></li>
-								<li><a href="cart.php"><?php echo LANG_VALUE_19; ?>( <?php
-																																			if (isset($_SESSION['cart_p_id'])) {
-																																				$table_total_price = 0;
-																																				$i = 0;
-																																				foreach ($_SESSION['cart_p_qty'] as $key => $value) {
-																																					$i++;
-																																					$arr_cart_p_qty[$i] = $value;
-																																				}
-																																				$i = 0;
-																																				foreach ($_SESSION['cart_p_current_price'] as $key => $value) {
-																																					$i++;
-																																					$arr_cart_p_current_price[$i] = $value;
-																																				}
-																																				for ($i = 1; $i <= count($arr_cart_p_qty); $i++) {
-																																					$row_total_price = $arr_cart_p_current_price[$i] * $arr_cart_p_qty[$i];
-																																					$table_total_price = $table_total_price + $row_total_price;
-																																				}
-																																				echo $table_total_price;
-																																			} else {
-																																				echo '0.00';
-																																			}
-																																			?>)</a></li>
-							</ul>
+								<!-- <li><a href="cart.php"><?php echo LANG_VALUE_19; ?>( <?php
+																							if (isset($_SESSION['cart_p_id'])) {
+																								$table_total_price = 0;
+																								$i = 0;
+																								foreach ($_SESSION['cart_p_qty'] as $key => $value) {
+																									$i++;
+																									$arr_cart_p_qty[$i] = $value;
+																								}
+																								$i = 0;
+																								foreach ($_SESSION['cart_p_current_price'] as $key => $value) {
+																									$i++;
+																									$arr_cart_p_current_price[$i] = $value;
+																								}
+																								for ($i = 1; $i <= count($arr_cart_p_qty); $i++) {
+																									$row_total_price = $arr_cart_p_current_price[$i] * $arr_cart_p_qty[$i];
+																									$table_total_price = $table_total_price + $row_total_price;
+																								}
+																								echo $table_total_price;
+																							} else {
+																								echo '0.00';
+																							}
+																							?>)</a></li>
+							</ul> -->
+								<?php if (isset($_SESSION['cust_name'])) { ?>
+									<div class="top-navbar">
+										<li>
+											<p class="top-navbar-user btn_con"><i class="fa-solid fa-user"></i><?php echo $_SESSION['cust_name'] ?></p>
+										</li>
+										<li> <a href="./logout.php" class="top-navbar-logout"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+									</div>
+								<?php } else { ?>
+									<li> <a href="login.php"><i class="fa fa-sign-in"></i> <?php echo LANG_VALUE_9; ?></a></li>
+									<li> <a href="registration.php"><i class="fa fa-user-plus"></i> <?php echo LANG_VALUE_15; ?></a></li>
+								<?php } ?>
 						</div>
 					</div>
+				</div>
+				<div class="col-md-2 trolly">
+					<a href="./cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
 				</div>
 			</div>
 		</div>
@@ -435,5 +374,5 @@ foreach ($result as $row) {
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 	<script>
-  AOS.init();
-</script>
+		AOS.init();
+	</script>

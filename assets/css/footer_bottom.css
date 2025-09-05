@@ -134,8 +134,8 @@
     }
 }
 footer{
-    color: #EFEEEA; 
-    background: #1a1a2e;
+    color: #fff; 
+    background: #151A28;
 }
 
 .all{
@@ -167,8 +167,8 @@ footer{
 
 .icon{
     font-size: 25px;
-    border: 2px solid #fff;
-    padding: 10px;
+    /* border: 2px solid #fff; */
+    /* padding: px; */
     border-radius: 50%;
 }
 
@@ -210,7 +210,7 @@ footer{
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
 
-.social-icon:hover::before {
+.social-icon:hover::before {''
     opacity: 1;
 }
 
