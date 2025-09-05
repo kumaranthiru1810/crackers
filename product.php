@@ -721,7 +721,8 @@ if ($success_message1 != '') {
                     foreach ($result as $row) {
                     ?>
                         <div class="item card">
-                            <div class="thumb">
+          
+                        <div class="thumb">
                                 <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>);"></div>
                                 <div class="overlay"></div>
                             </div>
